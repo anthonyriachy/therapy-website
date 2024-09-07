@@ -1,6 +1,6 @@
 
-import "../../public/AboutUs.css"
-import AnimatedItem from './AnimatedItem'
+import "./AboutUs.css"
+import AnimatedItem from '../AnimatedItem'
 
 function AboutUs() {
   return (

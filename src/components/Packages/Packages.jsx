@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Packages() {
   return (
     <main className='therapists-main'>

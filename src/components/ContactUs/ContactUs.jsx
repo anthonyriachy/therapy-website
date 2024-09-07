@@ -1,5 +1,4 @@
-import React from 'react'
-import '../../public/ContactUs.css'
+ import './ContactUs.css'
 function ContactUs() {
   return (
     <main className='contact-main'>
