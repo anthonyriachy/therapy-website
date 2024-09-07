@@ -1,0 +1,22 @@
+.main{
+    display:flex;
+    justify-content:space-between;
+    padding: 64px;
+    background-color: #315041;
+}
+
+.left-section{
+    display: flex;
+    width: 130px;
+    justify-content: space-between  ;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+.link{
+    padding:0 16px ;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+}

@@ -1,0 +1,25 @@
+.about-main{
+    padding: 64px;
+    min-height: 100vh;
+    display: flex;
+    background-color: #FFFCF6;
+    color: black;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+.about-header{
+    font-weight: bold;
+    font-size: xx-large;
+    padding-bottom: 32px;
+}
+
+.about-home-paragraph{
+    font-size: x-large;
+    padding-bottom: 16px;
+    line-break:normal;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
