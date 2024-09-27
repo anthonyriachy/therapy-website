@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../public/Time.css"
+import "./Time.css"
 
 function Time() {
   return (

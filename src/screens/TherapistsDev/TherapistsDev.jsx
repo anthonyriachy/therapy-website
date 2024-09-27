@@ -6,7 +6,7 @@ const API_URL = 'http://localhost:8080/therapists'; // Change this to your actua
 
 const TherapistPage = () => {
   const [therapists, setTherapists] = useState([]);
-  const [form, setForm] = useState({ Name: '', Email: '', PhoneNumber: '', Specialization: '', Experience: '' });
+  const [form, setForm] = useState({ Name: '', Email: '', PhoneNumber: '', Specialization: '', Experience: '',About:' ' });
   const [editing, setEditing] = useState(null);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const TherapistPage = () => {
         console.log(form)
         await axios.post(API_URL, form);
       }
-      setForm({ Name: '', Email: '', PhoneNumber: '', Specialization: '', Experience: '' });
+      setForm({ Name: '', Email: '', PhoneNumber: '', Specialization: '', Experience: '',About:' ' });
       fetchTherapists();
     } catch (error) {
       console.error('Error saving therapist:', error);
@@ -62,6 +62,7 @@ const TherapistPage = () => {
       <h1>Therapists</h1>
       <form onSubmit={handleSubmit} className="form">
         <input type="text" name="Name" placeholder="Name" value={form.Name} onChange={handleInputChange} required />
+        <input type="text" name="About" placeholder="About" value={form.About} onChange={handleInputChange} required />
         <input type="email" name="Email" placeholder="Email" value={form.Email} onChange={handleInputChange} required />
         <input type="text" name="PhoneNumber" placeholder="Phone Number" value={form.PhoneNumber} onChange={handleInputChange} />
         <input type="text" name="Specialization" placeholder="Specialization" value={form.Specialization} onChange={handleInputChange} />
@@ -72,6 +73,7 @@ const TherapistPage = () => {
         <thead>
           <tr>
             <th>Name</th>
+            <th>About</th>
             <th>Email</th>
             <th>Phone Number</th>
             <th>Specialization</th>
@@ -83,6 +85,7 @@ const TherapistPage = () => {
           {therapists.map((therapist) => (
             <tr key={therapist._id}>
               <td>{therapist.Name}</td>
+              <td>{therapist.About}</td>
               <td>{therapist.Email}</td>
               <td>{therapist.PhoneNumber}</td>
               <td>{therapist.Specialization}</td>

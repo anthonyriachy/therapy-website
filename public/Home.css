@@ -1,6 +1,6 @@
 .home-main{
     padding: 64px;
-    min-height: 80vh; /* Ensure .home-main takes the full viewport height */
+    min-height: 90vh; /* Ensure .home-main takes the full viewport height */
 
     display: flex;
     flex-direction: row;

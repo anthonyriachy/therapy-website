@@ -3,6 +3,7 @@ import './Therapists.css'
 import AnimatedItem from '../AnimatedItem'
 import { useEffect } from 'react';
 import { fetchTherapists } from '../../redux/slices/TherapistSlice';
+import { Link } from 'react-router-dom';
 
 function Therapists() {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ function Therapists() {
     dispatch(fetchTherapists());
   }, [dispatch]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <section className='person'>Loading...</section>; 
   if (error) return <p>Error: {error}</p>;
 
   return (
@@ -24,11 +25,11 @@ function Therapists() {
               <section className='therapists-list'>
              {
                 therapists?.map((therapist,index) => (
-                  <section key={index} className='person'>
-                    <img src={therapist.image} alt={"Image"} />
-                    <h2>{therapist.Name}</h2>              
-                    <p>{therapist.Description}</p>
-                  </section>
+                  <Link to={`/therapist/${therapist._id}`} key={index} className='person'>
+                      <img src={therapist.Image} alt={"Image"} />
+                      <h2>{therapist.Name}</h2>              
+                      <p>{therapist.Description}</p>
+                  </Link>
                 ))
              }
               </section>
